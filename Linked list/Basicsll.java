@@ -14,25 +14,35 @@ public class Basicsll {
         a.next=b;
         b.next=c;
         // a->b->c
+        // Print the data of the first node
         System.out.println(a.data);
+        // Print the data of the second node (a.next points to b)
         System.out.println(a.next.data);
+        // Print the data of the third node (a.next.next points to c)
         System.out.println(a.next.next.data);
-        System.out.println(c.next);//null
+        // Print null as c.next is null (end of the list)
+        System.out.println(c.next);
         
-        System.out.println(a.next);//address of b
-        System.out.println(b);//address of b
+        // Print the memory address of the second node (b)
+        System.out.println(a.next);
+        // Print the memory address of the second node (b) explicitly
+        System.out.println(b);
 
-        //priting the linked list with for loop
-        node temp = a;
-        for(int i=1;i<=3;i++){
-            System.out.print(temp.data+"->");
-            temp=temp.next;
+        // Printing the linked list using a for loop
+        node temp = a; // Start from the head of the list
+        for(int i = 1; i <= 3; i++) {
+            System.out.print(temp.data + "->"); // Print the data of the current node
+            temp = temp.next; // Move to the next node
         }
-        System.out.print("null");
+        System.out.print("null"); // End of the list
 
-        while(temp!=null){
-            System.out.print(temp.data+ "->");
-            temp=temp.next;
+        // Reset temp to the head of the list before the while loop
+        temp = a;
+        // Printing the linked list using a while loop
+        while(temp != null) {
+            System.out.print(temp.data + "->"); // Print the data of the current node
+            temp = temp.next; // Move to the next node
         }
+        System.out.print("null"); // End of the list
     }
 }
